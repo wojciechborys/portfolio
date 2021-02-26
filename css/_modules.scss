@@ -1,0 +1,264 @@
+/* File to show all of the modules styles such as testimonials, categories or any other file taken from 'code templates' folder. */
+
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: $neutral-100;
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        * {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: $light;
+            font-size: calc(#{$size} * 4);
+            line-height: calc(#{$size} * 4.5);
+
+            @media (max-width: 1450px) {
+                font-size: calc(#{$size-lg} * 4);
+                line-height: calc(#{$size-lg} * 4.5);
+            }
+
+            @media (max-width: 992px) {
+                font-size: calc(#{$size-md} * 4);
+                line-height: calc(#{$size-md} * 4.5);
+            }
+
+            @media (max-width: 576px) {
+                font-size: calc(#{$size-sm} * 4);
+                line-height: calc(#{$size-sm} * 5.5);
+            }
+        }
+
+        &__bolder {
+            font-weight: $regular;
+        }
+    }
+
+    .links {
+        &__github {
+            display: inline-block;
+            position: relative;
+            margin-right: 2em;
+
+            &:before {
+                content: "";
+                background-image: url(img/svg/github.svg);
+                height: 17px;
+                width: 17px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                left: -25px;
+                top: 5px;
+            }
+        }
+
+        &__email {
+            display: inline-block;
+            position: relative;
+            border-radius: $border-radius;
+            background-color: $neutral-80;
+            padding: 15px 30px;
+            padding-left: 55px;
+            transition-duration: .4s;
+
+            &:before {
+                content: "";
+                background-image: url(img/svg/mail.svg);
+                height: 20px;
+                width: 20px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                left: 25px;
+                margin-top: 3px;
+            }
+
+            &:hover {
+                color: white;
+                background-color: $neutral-60;
+            }
+        }
+    }
+
+    .navbar {
+        background-color: $neutral-100;
+        padding: 25px 0;
+        margin-right: 8em;
+
+        @media (max-width: 992px) {
+            background-color: white;
+        }
+
+        @media(max-width: 992px) {
+            padding: 0;
+        }
+
+        .nav-link {
+            padding: .5em 2em !important;
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+
+    .large-text-regular {
+        font-weight: $light;
+    }
+
+    &__scroller {
+        font-weight: $light;
+        position: absolute;
+        bottom: 5em;
+
+        &::before {
+            content: "";
+            height: 120px;
+            width: 1px;
+            top: 2em;
+            background-color: $neutral-80;
+            position: relative;
+            display: inline-block;
+            margin-right: 1em;
+        }
+
+        &::after {
+            content: "";
+            top: 3em;
+            background-color: white;
+            height: 40px;
+            width: 1px;
+            left: 0;
+            position: absolute
+        }
+    }
+}
+
+.portfolio {
+    height: 100vh;
+    background-color: $neutral-90;
+    border-radius: $border-radius;
+    border-radius: 30px;
+}
+
+//Footer
+#wrapper-footer {
+    background-color: $main;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-size: cover;
+
+    .footer-credit {
+        margin-bottom: 20px;
+
+        margin-top: 30px;
+
+        img {
+            margin-left: 10px;
+        }
+    }
+
+    a {
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .social-btns {
+        a {
+            margin-right: 10px;
+        }
+    }
+
+    .location-text {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        margin-top: 30px;
+
+        &:before {
+            content: "";
+            background-image: url(img/svg/map.svg);
+            height: 17px;
+            width: 17px;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: 0px;
+            top: 5px;
+        }
+    }
+
+    .tel-text {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 10px;
+
+        &:before {
+            content: "";
+            background-image: url(img/svg/telephone.svg);
+            height: 17px;
+            width: 17px;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: 0px;
+            top: 5px;
+        }
+    }
+
+    .mail-text {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 10px;
+
+        a {
+            color: white;
+            margin-top: 9px;
+            display: inline-block;
+
+            @media (max-width: 1450px) {
+                margin-top: 5px;
+            }
+        }
+
+        &:before {
+            content: "";
+            background-image: url(img/svg/mail.svg);
+            height: 17px;
+            width: 20px;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: 0px;
+            top: 15px;
+        }
+    }
+
+    .page-text {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .h5 {
+        color: white;
+        font-size: calc(#{$size} * 4) !important;
+        line-height: calc(#{$size} * 4.5);
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: unset;
+    }
+}

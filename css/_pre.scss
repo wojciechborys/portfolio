@@ -1,0 +1,296 @@
+//Cookies
+#cookie-info {
+    -webkit-transition: -webkit-transform 0.65s 0.2s;
+    transition: -webkit-transform 0.65s 0.2s;
+    transition: transform 0.65s 0.2s;
+    transition: transform 0.65s 0.2s, -webkit-transform 0.65s 0.2s;
+    opacity: 1;
+    bottom: 0px;
+    padding: .7em 11em;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    z-index: 2000;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 50px;
+    background-color: white;
+
+    @media(max-width: 576px) {
+        padding: .7em 1em;
+    }
+}
+
+@media (max-width: 380px) {
+    #cookie-info {
+        bottom: 0px;
+        //padding: 15px 52px 12px 20px;
+        position: fixed;
+        left: 0px;
+        width: 100%;
+    }
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    opacity: .6;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+#cookie-info a.close {
+    outline: none;
+    cursor: pointer;
+    text-shadow: none;
+    opacity: 1;
+    font-size: 16px;
+    background-color: $main;
+    color: white !important;
+    padding: 1em 2em;
+    z-index: 9;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+
+    @media(max-width: 992px) {
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
+#cookie-info a.close span.top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #fff;
+}
+
+#cookie-info a.close span.bottom {
+    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #fff;
+    top: 23px;
+}
+
+#cookie-info a.close span {
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+}
+
+#cookie-info p {
+    font-size: 15px;
+    margin: 1em 0;
+    line-height: 16px;
+    color: black;
+    width: 78%;
+    display: inline-block;
+    text-align: left;
+}
+
+#cookie-info.remove {
+    opacity: 0;
+    -webkit-transform: translate(-120%, 0);
+    transform: translate(-120%, 0);
+    -webkit-transition: -webkit-transform 1s .2s, opacity 1s .2s;
+    -webkit-transition: opacity 1s .2s, -webkit-transform 1s .2s;
+    transition: opacity 1s .2s, -webkit-transform 1s .2s;
+    transition: transform 1s .2s, opacity 1s .2s;
+    transition: transform 1s .2s, opacity 1s .2s, -webkit-transform 1s .2s;
+}
+
+#cookie-info {
+    a[href] {
+        transition-duration: .4s;
+        color: #292421;
+        font-weight: bold;
+    }
+}
+
+.checkboxes {
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 40px !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: white;
+        border: solid 2px gray;
+    }
+
+    &:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    input:checked~.checkmark {
+        background-color: white;
+        border: solid 2px $main;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+
+    .checkmark:after {
+        left: 7px;
+        top: 2px;
+        width: 8px;
+        height: 14px;
+        border: solid $main;
+        border-width: 0 3px 3px 0px;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+/////////////////////
+/* RESPONSIVE MENU */
+/////////////////////
+
+.icon-bar {
+    width: 22px;
+    height: 2px;
+    display: block;
+    background-color: $black;
+    transition: all 0.2s;
+    margin: 4px 0;
+}
+
+@media(max-width: 992px) {
+    #navbarNavDropdown {
+        overflow: hidden;
+        background-color: $main;
+        width: 100%;
+        z-index: 9999;
+        position: absolute;
+    }
+}
+
+.navbar-nav {
+    @media(min-width: 993px) {
+        //flex-direction: row;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    position: relative;
+    background: transparent !important;
+    z-index: 9999;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.collapse:not(.show) {
+    @media(max-width: 992px) {
+        display: block;
+        left: -999%;
+    }
+}
+
+.collapse,
+.collapsing {
+    transition: all 0.2s;
+}
+
+@media (max-width: 992px) {
+    #wrapper-navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        top: 0;
+        background-color: white;
+    }
+
+    #top-menu {
+        margin-top: 3em;
+        align-items: flex-start;
+        margin-left: 4em;
+
+        .menu-item {
+            margin-bottom: 2em;
+        }
+    }
+
+    #navbarNavDropdown {
+        left: -999%;
+        position: absolute;
+        top: 0;
+        transition-duration: .4s;
+    }
+}
+
+#navbarNavDropdown.show {
+    transition: all 0.2s;
+    height: 100vh;
+    left: -10vw;
+}
