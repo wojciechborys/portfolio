@@ -47,6 +47,14 @@ body {
     background-color: $neutral-100;
 }
 
+.main {
+    &.normal {
+        header {
+            border-bottom: solid 2px transparent;
+        }
+    }
+}
+
 button,
 input {
     &:focus {
@@ -220,6 +228,48 @@ body {
         }
     }
 
+    .medium-text-medium {
+        font-size: calc(#{$size} * 3);
+        line-height: calc(#{$size} * 4.5);
+        font-weight: $medium;
+
+        @media (max-width: 1450px) {
+            font-size: calc(#{$size-lg} * 3);
+            line-height: calc(#{$size-lg} * 4.5);
+        }
+
+        @media (max-width: 992px) {
+            font-size: calc(#{$size-md} * 3);
+            line-height: calc(#{$size-md} * 4.5);
+        }
+
+        @media (max-width: 576px) {
+            font-size: calc(#{$size-sm} * 3);
+            line-height: calc(#{$size-sm} * 5.5);
+        }
+    }
+
+    .medium-text-bold {
+        font-size: calc(#{$size} * 3);
+        line-height: calc(#{$size} * 4.5);
+        font-weight: $bold;
+
+        @media (max-width: 1450px) {
+            font-size: calc(#{$size-lg} * 3);
+            line-height: calc(#{$size-lg} * 4.5);
+        }
+
+        @media (max-width: 992px) {
+            font-size: calc(#{$size-md} * 3);
+            line-height: calc(#{$size-md} * 4.5);
+        }
+
+        @media (max-width: 576px) {
+            font-size: calc(#{$size-sm} * 3);
+            line-height: calc(#{$size-sm} * 5.5);
+        }
+    }
+
     .medium-text-regular {
         font-size: calc(#{$size} * 3);
         line-height: calc(#{$size} * 4.5);
@@ -370,27 +420,26 @@ body {
     h2,
     .h2 {
         font-style: normal;
-        font-weight: $medium;
+        font-weight: $semi-bold;
         line-height: calc(#{$size} * 8);
-        font-size: calc(#{$size} * 8);
+        font-size: calc(#{$size} * 9);
         margin-bottom: calc(#{$size} * 7);
-        ;
 
         @media (max-width: 1450px) {
             line-height: calc(#{$size-lg} * 8);
-            font-size: calc(#{$size-lg} * 8);
+            font-size: calc(#{$size-lg} * 9);
             margin-bottom: calc(#{$size-lg} * 7);
         }
 
         @media (max-width: 992px) {
             line-height: calc(#{$size-md} * 8);
-            font-size: calc(#{$size-md} * 8);
+            font-size: calc(#{$size-md} * 9);
             margin-bottom: calc(#{$size-md} * 7);
         }
 
         @media (max-width: 576px) {
             line-height: calc(#{$size-sm} * 8);
-            font-size: calc(#{$size-sm} * 8);
+            font-size: calc(#{$size-sm} * 9);
             margin-bottom: calc(#{$size-sm} * 7);
         }
 
@@ -398,25 +447,25 @@ body {
             font-style: normal;
             font-weight: $medium;
             line-height: calc(#{$size} * 8);
-            font-size: calc(#{$size} * 8);
+            font-size: calc(#{$size} * 9);
             margin-bottom: calc(#{$size} * 7);
             ;
 
             @media (max-width: 1450px) {
                 line-height: calc(#{$size-lg} * 8);
-                font-size: calc(#{$size-lg} * 8);
+                font-size: calc(#{$size-lg} * 9);
                 margin-bottom: calc(#{$size-lg} * 7);
             }
 
             @media (max-width: 992px) {
                 line-height: calc(#{$size-md} * 8);
-                font-size: calc(#{$size-md} * 8);
+                font-size: calc(#{$size-md} * 9);
                 margin-bottom: calc(#{$size-md} * 7);
             }
 
             @media (max-width: 576px) {
                 line-height: calc(#{$size-sm} * 8);
-                font-size: calc(#{$size-sm} * 8);
+                font-size: calc(#{$size-sm} * 9);
                 margin-bottom: calc(#{$size-sm} * 7);
             }
         }
@@ -632,6 +681,22 @@ body {
                 font-size: calc(#{$size-sm} * 3.33);
                 margin-bottom: calc(#{$size-sm} * 3);
             }
+        }
+    }
+
+    blockquote {
+        padding: 2em 2em 2em 4em;
+        background-color: $neutral-90;
+        font-family: 'Open Sans', sans-serif;
+        border-bottom-right-radius: 40px;
+        margin-bottom: 2em;
+
+        * {
+            font-size: calc(#{$size} * 3.5);
+            letter-spacing: 1px;
+            line-height: calc(#{$size} * 5.5);
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 0;
         }
     }
 

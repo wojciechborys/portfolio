@@ -1,15 +1,22 @@
 /* File to show all of the modules styles such as testimonials, categories or any other file taken from 'code templates' folder. */
 
+.backgroundme {
+    background-color: $neutral-100;
+}
 
 header {
     position: fixed;
     width: 100%;
     z-index: 999;
     background-color: $neutral-100;
+    border-bottom-right-radius: 40px;
+    transition-duration: .4s;
+    border-bottom: solid 2px $button;
 
     .header-wrapper {
         display: flex;
         justify-content: space-between;
+        background-color: $neutral-100;
     }
 
     .logo {
@@ -122,12 +129,12 @@ header {
         font-weight: $light;
         position: absolute;
         bottom: 5em;
+        transition-duration: .4s;
 
-        &::before {
-            content: "";
+        &--elem {
             height: 120px;
             width: 1px;
-            top: 2em;
+            top: 3em;
             background-color: $neutral-80;
             position: relative;
             display: inline-block;
@@ -136,12 +143,29 @@ header {
 
         &::after {
             content: "";
-            top: 3em;
+            top: 4em;
+            animation: MoveUpDown 2.5s linear infinite;
             background-color: white;
             height: 40px;
             width: 1px;
             left: 0;
             position: absolute
+        }
+
+        @keyframes MoveUpDown {
+
+            0%,
+            100% {
+                top: 5em;
+            }
+
+            50% {
+                top: 4em;
+            }
+        }
+
+        &:hover {
+            bottom: calc(5em + 5px);
         }
     }
 }
@@ -151,6 +175,78 @@ header {
     background-color: $neutral-90;
     border-radius: $border-radius;
     border-radius: 30px;
+
+    &__index {
+        letter-spacing: 4px;
+        font-weight: $extra-bold;
+        font-size: 170px;
+        position: absolute;
+        margin-top: -40px;
+        opacity: 0.05;
+    }
+
+    &__image {
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10;
+        position: absolute;
+        right: 0;
+    }
+
+    &__header {
+        margin-bottom: 3em;
+    }
+
+    &__type {
+        padding-left: 4em;
+        position: relative;
+        font-weight: $bold;
+        margin-right: 8px;
+
+        &:before {
+            content: "";
+            background-image: url(../img/svg/arrow.svg);
+            height: 40px;
+            width: 40px;
+            background-color: $neutral-100;
+            border-radius: 50%;
+            background-position: center;
+            background-size: 20px;
+            position: absolute;
+            background-repeat: no-repeat;
+            left: 0px;
+            top: -9px;
+        }
+    }
+
+    &__client {
+        font-weight: $medium;
+        margin-left: 8px;
+    }
+}
+
+.about {
+    padding: 10em 0;
+}
+
+.portfolio {
+    &__single-field {
+        .logo-wrapper {
+            height: 130px;
+        }
+
+        &--logo {
+            width: 70px;
+            height: auto;
+            //filter: brightness(0) invert(1);
+        }
+    }
+}
+
+.stack {
+    padding: 10em 0;
+
 }
 
 //Footer
@@ -227,5 +323,31 @@ header {
     ul {
         list-style: none;
         padding-left: unset;
+    }
+}
+
+//swiper 
+.swiper-container {
+    height: 100%;
+}
+
+.swiper-pagination {
+    width: 50% !important;
+    bottom: 70px !important;
+    text-align: left;
+
+    .swiper-pagination-bullet {
+        width: 64px;
+        height: 1px;
+        position: relative;
+        margin: 0 6px !important;
+        background-color: $neutral-50 !important;
+        ;
+        opacity: 1 !important;
+
+        &.swiper-pagination-bullet-active {
+            background-color: white !important;
+            ;
+        }
     }
 }

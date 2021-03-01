@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from "@reach/router";
 
+
+
 class Navbar extends React.Component {
     render() {
         return ( 
+            
             <header>
                 <div className="container mx-auto">
                     <div className="row">
@@ -14,10 +17,10 @@ class Navbar extends React.Component {
                             <nav className="navbar navbar-expand-lg navbar-light">
                                 <div id="navbarNavDropdown" className="collapse navbar-collapse">
                                     <ul className="navbar-nav">
-                                        <li className="nav-link"><Link className="nav-item" to="/">Home</Link></li>
-                                        <li className="nav-link"><a href="#">Works</a></li>
-                                        <li className="nav-link"><a href="#">Notes</a></li>
-                                        <li className="nav-link"><a href="#">Let's Talk!</a></li>
+                                        <li className="nav-link centered mb-0"><Link className="nav-item" to="/">Home</Link></li>
+                                        <li className="nav-link centered mb-0"><a href="#">Works</a></li>
+                                        <li className="nav-link centered mb-0"><a href="#">Notes</a></li>
+                                        <li className="nav-link centered mb-0"><a href="#">Let's Talk!</a></li>
                                     </ul>
                                 </div>
                             </nav>
